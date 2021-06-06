@@ -1,5 +1,7 @@
 name: Node.js Package
 on:
+  push:
+    branches: [ main ]
   release:
     types: [created]
 jobs:
@@ -16,7 +18,7 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
-      - run: npm build
+      - run: ng build
       - run: npm publish dist
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
