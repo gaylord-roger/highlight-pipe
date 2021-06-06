@@ -1,0 +1,30 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/lib",
+    "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "types": [],
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  },
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": false,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "highlight-pipe.js",
+    "flatModuleId": "highlight-pipe"
+  },
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "files": [
+    "./public_api.ts"
+  ]
+}
