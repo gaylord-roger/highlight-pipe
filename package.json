@@ -7,8 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint",
-    "prepublishOnly": "npm run build"
+    "lint": "ng lint"
   },
   "private": false,
   "main": "dist/index.js",
