@@ -1,12 +1,13 @@
 {
-    "name": "@gaylord-roger/highlight-pipe",
+    "name": "@gene6/highlight-pipe",
     "version": "0.0.1",
     "repository": {
       "type": "git",
       "url": "https://github.com/gaylord-roger/highlight-pipe"
     },
     "keywords": [
-      "angular"
+      "angular",
+      "highlight"
     ],
     "module": "highlight-pipe.js",
     "typings": "highlight-pipe.d.ts",
