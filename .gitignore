@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+/.angular
 /dist
 /tmp
 /out-tsc
@@ -13,6 +14,7 @@ package-lock.json
 chrome-profiler-events*.json
 
 # IDEs and editors
+/.vs
 /.idea
 .project
 .classpath
