@@ -1,8 +1,8 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "extends": "../tsconfig.json",
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/lib",
+    "outDir": "../../out-tsc/lib",
     "declaration": true,
     "declarationMap": true,
     "inlineSources": true,
@@ -11,7 +11,7 @@
     "types": [],
     "lib": [
       "dom",
-      "es2018"
+      "es2020"
     ]
   },
   "angularCompilerOptions": {
@@ -21,10 +21,6 @@
     "flatModuleOutFile": "highlight-pipe.js",
     "flatModuleId": "highlight-pipe"
   },
-  "exclude": [
-    "**/*.spec.ts"
-  ],
-  "files": [
-    "./public_api.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts"]
 }

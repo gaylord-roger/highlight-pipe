@@ -10,18 +10,24 @@
     "lint": "ng lint"
   },
   "private": false,
-  "main": "dist/index.js",
   "files": [
     "dist/**"
   ],
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15",
-    "@angular/cli": "^15",
-    "@angular/compiler": "^15",
-    "@angular/compiler-cli":"^15",
-    "@angular/core": "^15",
+    "@angular-devkit/build-angular": "^17",
+    "@angular-eslint/builder": "^20.4.0",
+    "@angular-eslint/eslint-plugin": "^20.4.0",
+    "@angular-eslint/eslint-plugin-template": "^20.4.0",
+    "@angular-eslint/schematics": "^20.4.0",
+    "@angular/cli": "^17",
+    "@angular/compiler": "^17",
+    "@angular/compiler-cli": "^17",
+    "@angular/core": "^17",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
     "codelyzer": "^6.0.0",
-    "ng-packagr": "^15",
-    "typescript": "^4"
+    "eslint": "^9.37.0",
+    "ng-packagr": "^17",
+    "typescript": "^5"
   }
 }

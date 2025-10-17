@@ -16,8 +16,8 @@
     ],
     "lib": ["es2018", "dom"],
     "paths": {
-      "@gaylord-roger/highlight-pipe": ["./src/public_api"],
-      "@gaylord-roger/highlight-pipe/*": ["./src/*/public_api"]
+      "@gaylord-roger/highlight-pipe": ["projects/highlight-pipe/public_api"],
+      "@gaylord-roger/highlight-pipe/*": ["projects/highlight-pipe/*/public_api"]
     }
   },
   "angularCompilerOptions": {

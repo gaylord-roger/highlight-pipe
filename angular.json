@@ -5,32 +5,26 @@
   "projects": {
     "highlight-pipe": {
       "projectType": "library",
-      "root": "src",
+      "root": "projects/highlight-pipe",
+      "sourceRoot": "projects/highlight-pipe/src",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "src/ng-package.json",
-            "tsConfig": "src/tsconfig.lib.prod.json"
+            "project": "projects/highlight-pipe/ng-package.json",
+            "tsConfig": "projects/highlight-pipe/tsconfig.lib.prod.json"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "./tsconfig.json",
-              "./tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/highlight-pipe/src/**/*.ts",
+              "projects/highlight-pipe/src/**/*.html"
             ]
           }
         }
       }
     }
-  },
-  "defaultProject": "highlight-pipe",
-  "cli": {
-    "defaultCollection": "@angular-eslint/schematics"
   }
 }

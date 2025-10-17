@@ -1,0 +1,18 @@
+{
+  "extends": ["plugin:@angular-eslint/recommended"],
+  "ignorePatterns": ["projects/highlight-pipe/**/*.spec.ts"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["projects/highlight-pipe/tsconfig.lib.json"]
+      },
+      "rules": {}
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "rules": {}
+    }
+  ]
+}

@@ -1,39 +1,28 @@
 name: Node.js Package
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   release:
     types: [created]
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
 jobs:
-  build:
-    runs-on: ubuntu-latest 
-    permissions: 
-      contents: read
-      packages: write 
+  publish:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install packages
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Copy the Readme
-        run: |
-          cp "README.md" "dist/README.md"
-      - name: Setup .npmrc file to publish to npm
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '12.x'
-          registry-url: 'https://registry.npmjs.org'
-      - name: Publish to npm
-        run: npm publish dist --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      ## Setup .npmrc file to publish to GitHub Packages
-      #- uses: actions/setup-node@v2
-      #  with:
-      #    node-version: '12.x'
-      #    registry-url: 'https://npm.pkg.github.com'
-      ## publish to github
-      #- run: npm publish dist
-      #  env:
-      #    NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+          scope: "@gene6"
+      - run: npm install -g npm@latest
+      - run: npm ci
+      - run: npm run build
+      - run: cp "README.md" "dist/highlight-pipe/README.md"
+      - run: |
+          cd dist/highlight-pipe
+          npm publish

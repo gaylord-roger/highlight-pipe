@@ -1,0 +1,20 @@
+{
+  "name": "@gene6/highlight-pipe",
+  "version": "1.0.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaylord-roger/highlight-pipe"
+  },
+  "keywords": [
+    "angular",
+    "highlight"
+  ],
+  "main": "fesm/gene6-highlight-pipe.mjs",
+  "module": "fesm2022/gene6-highlight-pipe.mjs",
+  "es2015": "fesm2022/gene6-highlight-pipe.mjs",
+  "typings": "index.d.ts",
+  "sideEffects": false,
+  "peerDependencies": {
+    "@angular/core": ">= 15 <22"
+  }
+}
