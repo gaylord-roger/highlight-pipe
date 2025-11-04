@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { HighlightPipe } from './highlight.pipe';
 
 @NgModule({
-  imports: [],
+  imports: [HighlightPipe],
   exports: [HighlightPipe],
-  declarations: [HighlightPipe],
+  declarations: [],
 })
 export class HighlightModule {}
