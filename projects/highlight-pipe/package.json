@@ -15,6 +15,6 @@
   "typings": "index.d.ts",
   "sideEffects": false,
   "peerDependencies": {
-    "@angular/core": ">= 15 <22"
+    "@angular/core": ">= 15 <23"
   }
 }
