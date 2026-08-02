@@ -9,7 +9,7 @@
       "sourceRoot": "projects/highlight-pipe/src",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "builder": "@angular/build:ng-packagr",
           "options": {
             "project": "projects/highlight-pipe/ng-package.json",
             "tsConfig": "projects/highlight-pipe/tsconfig.lib.prod.json"

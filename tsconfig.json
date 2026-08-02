@@ -2,30 +2,27 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "esModuleInterop": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "moduleResolution": "bundler",
     "module": "es2020",
-    "typeRoots": [
-        "node_modules/@types"
-    ],
+    "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "@gaylord-roger/highlight-pipe": ["projects/highlight-pipe/public_api"],
-      "@gaylord-roger/highlight-pipe/*": ["projects/highlight-pipe/*/public_api"]
+      "@gaylord-roger/highlight-pipe": ["./projects/highlight-pipe/public_api"],
+      "@gaylord-roger/highlight-pipe/*": [
+        "./projects/highlight-pipe/*/public_api"
+      ]
     }
   },
   "angularCompilerOptions": {
-    "enableIvy": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
-    "strictPropertyInitialization": false,
+    "strictTemplates": true
   }
 }
